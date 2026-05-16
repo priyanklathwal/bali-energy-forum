@@ -160,12 +160,23 @@ def main():
     # Bali highlight (pulse + brighter dot)
     bx, by = bali_dot
     parts.append(f'  <g transform="translate({bx:.1f},{by:.1f})">')
-    parts.append('    <circle r="34" fill="url(#bali-pulse)">')
-    parts.append('      <animate attributeName="r" values="22;38;22" dur="2.6s" repeatCount="indefinite"/>')
+    parts.append('    <circle r="38" fill="url(#bali-pulse)">')
+    parts.append('      <animate attributeName="r" values="24;42;24" dur="2.6s" repeatCount="indefinite"/>')
     parts.append('      <animate attributeName="opacity" values="0.85;0.20;0.85" dur="2.6s" repeatCount="indefinite"/>')
     parts.append('    </circle>')
-    parts.append(f'    <circle r="7" fill="#91302F" stroke="#ffffff" stroke-width="2.2"/>')
+    parts.append('    <circle r="14" fill="none" stroke="#91302F" stroke-width="1.3" opacity="0.55"/>')
+    parts.append('    <circle r="7" fill="#91302F" stroke="#ffffff" stroke-width="2.4"/>')
     parts.append('  </g>')
+
+    # Bali label with leader line. Position down-and-left so it fits in canvas.
+    label_x = bx - 195
+    label_y = by + 95
+    parts.append(f'  <g font-family="Open Sans, -apple-system, Segoe UI, sans-serif">')
+    # Leader line from dot to label (curved-style via two segments)
+    parts.append(f'    <path d="M {bx-8:.1f} {by+8:.1f} L {bx-90:.1f} {by+78:.1f} L {label_x+170:.1f} {label_y-12:.1f}" stroke="#91302F" stroke-width="1.2" fill="none"/>')
+    parts.append(f'    <text x="{label_x:.1f}" y="{label_y:.1f}" font-size="18" font-weight="700" letter-spacing="0.3" fill="#91302F">Bali, Indonesia</text>')
+    parts.append(f'    <text x="{label_x:.1f}" y="{label_y+22:.1f}" font-size="11" font-weight="700" letter-spacing="1.6" fill="#6B7481">JUNE 3 TO 5, 2026</text>')
+    parts.append(f'  </g>')
 
     parts.append('</svg>')
 
