@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 540" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <!-- Stylized dotted world map. Continents approximated with a dot grid.
+       Dots are Infrastructure red. A pulsing star marks Bali, Indonesia. -->
+  <defs>
+    <radialGradient id="pulse" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#91302F" stop-opacity="0.9"/>
+      <stop offset="60%" stop-color="#91302F" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#91302F" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="dot" width="14" height="14" patternUnits="userSpaceOnUse">
+      <circle cx="7" cy="7" r="3.2" fill="#91302F"/>
+    </pattern>
+    <clipPath id="continents">
+      <!-- North America -->
+      <path d="M 80 90 C 50 130, 70 200, 110 240 L 160 280 L 200 250 L 230 200 L 260 160 L 240 130 L 200 110 L 170 100 L 130 95 Z"/>
+      <!-- Central America -->
+      <path d="M 200 270 L 230 290 L 250 320 L 240 340 L 220 330 L 210 305 Z"/>
+      <!-- South America -->
+      <path d="M 270 320 L 310 320 L 340 360 L 350 420 L 330 480 L 290 500 L 270 470 L 260 410 L 265 360 Z"/>
+      <!-- Greenland -->
+      <path d="M 320 60 L 360 65 L 370 100 L 350 115 L 320 95 Z"/>
+      <!-- Europe -->
+      <path d="M 440 110 L 500 100 L 540 115 L 560 145 L 540 175 L 500 180 L 470 175 L 455 150 Z"/>
+      <!-- Africa -->
+      <path d="M 470 200 L 540 200 L 580 240 L 600 300 L 580 360 L 550 410 L 510 420 L 480 380 L 470 320 L 465 260 Z"/>
+      <!-- Middle East -->
+      <path d="M 560 180 L 610 185 L 640 220 L 620 250 L 580 245 L 565 215 Z"/>
+      <!-- Russia / Northern Asia -->
+      <path d="M 560 90 L 700 80 L 820 95 L 870 120 L 850 150 L 780 155 L 700 145 L 620 140 L 575 125 Z"/>
+      <!-- Central / South Asia -->
+      <path d="M 640 180 L 720 175 L 770 210 L 760 260 L 720 280 L 680 270 L 650 235 Z"/>
+      <!-- China / East Asia -->
+      <path d="M 770 175 L 840 180 L 880 215 L 870 245 L 820 255 L 780 235 Z"/>
+      <!-- Southeast Asia -->
+      <path d="M 800 270 L 860 275 L 890 305 L 870 330 L 830 325 L 810 300 Z"/>
+      <!-- Indonesia / Philippines -->
+      <path d="M 820 335 L 900 340 L 920 360 L 880 370 L 830 365 Z"/>
+      <!-- Australia -->
+      <path d="M 860 400 L 940 405 L 960 440 L 920 470 L 870 460 L 855 430 Z"/>
+      <!-- New Zealand -->
+      <path d="M 960 470 L 980 475 L 985 495 L 965 495 Z"/>
+      <!-- Japan -->
+      <path d="M 900 180 L 920 200 L 915 230 L 895 215 Z"/>
+      <!-- UK / Iceland -->
+      <path d="M 420 130 L 445 135 L 440 155 L 420 152 Z"/>
+      <!-- Pacific Islands clusters -->
+      <circle cx="940" cy="370" r="6"/>
+      <circle cx="960" cy="395" r="5"/>
+      <circle cx="935" cy="410" r="4"/>
+    </clipPath>
+  </defs>
+
+  <!-- Dotted continents -->
+  <rect width="1000" height="540" fill="url(#dot)" clip-path="url(#continents)"/>
+
+  <!-- Highlight: Bali, Indonesia (approx position in the SE Asia cluster) -->
+  <g transform="translate(870, 358)">
+    <circle r="42" fill="url(#pulse)">
+      <animate attributeName="r" values="32;46;32" dur="2.6s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.9;0.2;0.9" dur="2.6s" repeatCount="indefinite"/>
+    </circle>
+    <circle r="9" fill="#91302F" stroke="#fff" stroke-width="2.5"/>
+    <circle r="3.2" fill="#fff"/>
+  </g>
+
+  <!-- Label -->
+  <g transform="translate(720, 410)" font-family="'Open Sans', sans-serif" font-size="13" font-weight="700" fill="#91302F">
+    <line x1="150" y1="-44" x2="120" y2="-10" stroke="#91302F" stroke-width="1.5"/>
+    <rect x="-2" y="-18" width="118" height="26" fill="#fff" stroke="#91302F" stroke-width="1.4" rx="2"/>
+    <text x="8" y="0" letter-spacing="0.4">BALI, INDONESIA</text>
+  </g>
+</svg>
