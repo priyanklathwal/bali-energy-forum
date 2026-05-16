@@ -645,6 +645,12 @@ main li { margin-bottom: 6px; }
   font-size: 15.5px;
   margin-bottom: 8px;
 }
+.session .session-sub {
+  font-size: 14px;
+  color: var(--wb-grey-500);
+  font-style: italic;
+  margin: -2px 0 10px;
+}
 .session .details {
   font-size: 14px;
   color: var(--wb-grey-700);

@@ -3,6 +3,8 @@
   const path = window.location.pathname.split('/').pop() || 'index.html';
   const isHome = path === 'index.html' || path === '';
 
+  const lockSVG = `<svg class="lock-ico" viewBox="0 0 20 20" width="11" height="11" fill="currentColor" aria-hidden="true"><path d="M10 1.6c-2.32 0-4.2 1.88-4.2 4.2v2.4H4.6c-.66 0-1.2.54-1.2 1.2v7.4c0 .66.54 1.2 1.2 1.2h10.8c.66 0 1.2-.54 1.2-1.2V9.4c0-.66-.54-1.2-1.2-1.2h-1.2V5.8c0-2.32-1.88-4.2-4.2-4.2zm0 1.6c1.43 0 2.6 1.17 2.6 2.6v2.4H7.4V5.8c0-1.43 1.17-2.6 2.6-2.6z"/></svg>`;
+
   const subnav = [
     { href: 'index.html',       label: 'Overview' },
     { href: 'agenda.html',      label: 'Agenda' },
@@ -13,38 +15,26 @@
   ].map(n => {
     const active = n.href === path ? ' active' : '';
     const cls = n.gated ? 'gated' : '';
-    const lock = n.gated ? ' \u{1F512}' : '';
+    const lock = n.gated ? lockSVG : '';
     return `<a href="${n.href}" class="${cls}${active}">${n.label}${lock}</a>`;
   }).join('');
-
-  const wbGlobeSVG = `<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-    <circle cx="32" cy="32" r="28" fill="#004972"/>
-    <g fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round">
-      <ellipse cx="32" cy="32" rx="28" ry="13"/>
-      <ellipse cx="32" cy="32" rx="14" ry="28"/>
-      <line x1="4" y1="32" x2="60" y2="32"/>
-      <line x1="32" y1="4" x2="32" y2="60"/>
-    </g>
-  </svg>`;
 
   const topBar = `
     <div class="wb-topbar">
       <div class="wb-topbar-inner">
-        <a class="wb-brand" href="index.html">
-          <span class="wb-brand-mark">${wbGlobeSVG}</span>
-          <span class="wb-brand-text">WORLD BANK GROUP</span>
+        <a class="wb-brand" href="index.html" aria-label="World Bank Group">
+          <img class="wb-brand-logo" src="images/wbg-logo.svg" alt="">
         </a>
         <nav class="wb-topnav" aria-label="World Bank Group">
-          <a href="https://www.worldbank.org/en/about/what-we-do" target="_blank">Our Priorities</a>
-          <a href="https://www.worldbank.org/en/who-we-are" target="_blank">Who We Are</a>
-          <a href="https://www.worldbank.org/en/what-we-do" target="_blank">What We Do</a>
-          <a href="https://www.worldbank.org/en/where-we-work" target="_blank">Where We Work</a>
-          <a href="https://www.worldbank.org/en/work-with-us" target="_blank">Work With Us</a>
+          <a href="https://www.worldbank.org/en/about/what-we-do" target="_blank" rel="noopener">Our Priorities</a>
+          <a href="https://www.worldbank.org/en/who-we-are" target="_blank" rel="noopener">Who We Are</a>
+          <a href="https://www.worldbank.org/en/what-we-do" target="_blank" rel="noopener">What We Do</a>
+          <a href="https://www.worldbank.org/en/where-we-work" target="_blank" rel="noopener">Where We Work</a>
+          <a href="https://www.worldbank.org/en/work-with-us" target="_blank" rel="noopener">Work With Us</a>
         </nav>
       </div>
     </div>`;
 
-  // Event sub-nav (only shown on inner pages — the landing page has the hero own the chrome)
   const eventNav = isHome ? '' : `
     <div class="wb-eventnav">
       <div class="wb-eventnav-inner">
@@ -53,26 +43,13 @@
       </div>
     </div>`;
 
-  // Inner-page breadcrumb (the landing page renders its own inside the hero)
-  const pageTitle = document.title.split('|')[0].trim();
-  const breadcrumb = isHome ? '' : `
-    <div class="breadcrumb">
-      <div class="breadcrumb-inner">
-        <a href="index.html"><svg class="bc-home" viewBox="0 0 24 24" width="14" height="14" fill="currentColor" aria-hidden="true"><path d="M12 3 2 12h3v8h5v-5h4v5h5v-8h3z"/></svg></a>
-        <span class="sep">&rsaquo;</span>
-        <a href="#" aria-disabled="true">Events</a>
-        <span class="sep">&rsaquo;</span>
-        <span>${pageTitle}</span>
-      </div>
-    </div>`;
-
   const footer = `
     <footer class="wb-footer">
       <div class="wb-footer-inner">
         <div>
           <h4>About the Forum</h4>
-          <p>The EAP Energy Knowledge and Learning Forum is convened by the World Bank Group, with support from ESMAP and partners including IEA, IRENA, and Lawrence Berkeley National Laboratory.</p>
-          <p>Bali, Indonesia &middot; June 3&ndash;5, 2026.</p>
+          <p>The East Asia and Pacific Energy Knowledge and Learning Forum is convened by the World Bank Group with support from ESMAP and partners including the IEA, IRENA, and Lawrence Berkeley National Laboratory.</p>
+          <p>Bali, Indonesia &middot; June 3 to 5, 2026.</p>
         </div>
         <div>
           <h4>Quick Links</h4>
@@ -102,6 +79,6 @@
       </div>
     </footer>`;
 
-  document.body.insertAdjacentHTML('afterbegin', topBar + eventNav + breadcrumb);
+  document.body.insertAdjacentHTML('afterbegin', topBar + eventNav);
   document.body.insertAdjacentHTML('beforeend', footer);
 })();
