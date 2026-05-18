@@ -980,10 +980,63 @@ main li { margin-bottom: 6px; font-size: 15.5px; line-height: 1.55; }
   .wb-eventnav-links { gap: 14px; }
   .section-tabs-inner { padding: 0 20px; gap: 22px; }
   .story-section { padding: 56px 0; }
+  .story-inner { padding: 0 22px; }
   .split-section { padding: 56px 0; }
   .session { grid-template-columns: 1fr; gap: 6px; padding: 14px 0; }
   .feature-grid { grid-template-columns: 1fr; }
   .feature-card { border-right: none; padding: 22px 0; }
   .themes-grid { grid-template-columns: 1fr; }
   .partner-grid { grid-template-columns: repeat(2, 1fr); }
+
+  /* Hero: tighter padding, scaled-down type for phones */
+  .hero-split-left { padding: 36px 22px 40px; }
+  .hero-split h1 { font-size: 28px; letter-spacing: -0.3px; margin-bottom: 18px; }
+  .hero-eyebrow { font-size: 13px; letter-spacing: 2px; margin-bottom: 18px; }
+  .hero-tag { font-size: 10.5px; padding: 6px 12px; margin-bottom: 22px; }
+  .hero-subtitle { font-size: 15.5px; margin-bottom: 24px; }
+
+  /* Info strip uses single column already at 980 — tighten padding */
+  .info-strip-inner { padding: 28px 22px; }
+
+  /* Why-Now context: allow the one-line tagline to wrap on phones,
+     and let the wide chart pan horizontally instead of shrinking to
+     unreadable size */
+  .context-heading { padding: 0 22px; margin-bottom: 22px; }
+  .context-heading .pullquote.one-line {
+    white-space: normal;
+    font-size: 22px;
+    line-height: 1.22;
+    max-width: none;
+    letter-spacing: -0.2px;
+  }
+  .context-figure-wrap {
+    padding: 0 16px;
+    margin-bottom: 36px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .context-figure { min-width: 720px; margin: 0; }
+
+  /* Touch targets: buttons at minimum 44px tall */
+  .btn { padding: 13px 20px; font-size: 13.5px; }
+  .btn-row { gap: 10px; }
+
+  /* Display headlines proportionate to phone width */
+  h2.display { font-size: 24px; line-height: 1.18; }
+
+  /* Closing CTA: tighter padding */
+  .closing-inner { padding: 56px 22px; }
+  .closing-cta h2 { font-size: 22px; }
+
+  /* Themes: lighter card chrome on single column */
+  .theme-card { border-right: none; padding: 22px 0; }
+}
+
+@media (max-width: 420px) {
+  .hero-split h1 { font-size: 26px; }
+  .hero-eyebrow { font-size: 12px; margin-bottom: 14px; }
+  .context-heading .pullquote.one-line { font-size: 20px; }
+  h2.display { font-size: 22px; }
+  .partner-grid { grid-template-columns: 1fr; }
+  .stats { grid-template-columns: repeat(2, 1fr); gap: 18px; }
 }
