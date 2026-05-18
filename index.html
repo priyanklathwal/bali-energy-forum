@@ -70,17 +70,8 @@
 <!-- ============================================================
      OVERVIEW — bold headline + body
      ============================================================ -->
-<section id="overview" class="story-section">
-  <div class="story-inner">
-    <p class="kicker">About the Forum</p>
-    <h2 class="display">The first regional platform for peer learning on the sustainable energy transition in East Asia and the Pacific.</h2>
-    <div class="story-body">
-      <p>
-        Convened by the <a href="https://www.worldbank.org/" target="_blank" rel="noopener">World Bank Group</a> with support from the <a href="https://www.esmap.org/" target="_blank" rel="noopener">Energy Sector Management Assistance Program</a>, the <a href="https://www.iea.org/" target="_blank" rel="noopener">International Energy Agency</a>, the <a href="https://www.irena.org/" target="_blank" rel="noopener">International Renewable Energy Agency</a>, and <a href="https://www.lbl.gov/" target="_blank" rel="noopener">Lawrence Berkeley National Laboratory</a>. The Forum brings together government representatives, utility leadership, and energy sector stakeholders from across the region.
-      </p>
-    </div>
-  </div>
-</section>
+<!-- About + News combined section (was two separate sections) -->
+
 
 <!-- ============================================================
      WHY NOW — two-column split with vertical rule
@@ -195,20 +186,35 @@
 <!-- ============================================================
      IN THE NEWS — curated EAP energy + AI items
      ============================================================ -->
-<section id="news" class="story-section">
+<section id="overview" class="story-section">
   <div class="story-inner">
-    <div class="news-header">
-      <div>
-        <p class="kicker">In the News</p>
-        <h2 class="display">The regional pulse on energy and power grids.</h2>
-        <p class="lead-2">A short, curated read of recent developments shaping the Forum agenda &mdash; project milestones, regional initiatives, and the policy and investment signals reshaping power systems across East Asia and the Pacific.</p>
-      </div>
-      <div class="news-meta">
-        <span class="news-meta-label">As of May 2026</span>
-      </div>
-    </div>
+    <div class="about-news-split">
 
-    <div class="news-feed mt-32" id="news-feed">
+      <!-- LEFT: About the Forum -->
+      <aside class="about-side">
+        <p class="kicker">About the Forum</p>
+        <h2 class="about-side-title">The first regional platform for peer learning on the sustainable energy transition in East Asia and the Pacific.</h2>
+        <div class="story-body">
+          <p>
+            Convened by the <a href="https://www.worldbank.org/" target="_blank" rel="noopener">World Bank Group</a> with support from the <a href="https://www.esmap.org/" target="_blank" rel="noopener">Energy Sector Management Assistance Program</a>, the <a href="https://www.iea.org/" target="_blank" rel="noopener">International Energy Agency</a>, the <a href="https://www.irena.org/" target="_blank" rel="noopener">International Renewable Energy Agency</a>, and <a href="https://www.lbl.gov/" target="_blank" rel="noopener">Lawrence Berkeley National Laboratory</a>. The Forum brings together government representatives, utility leadership, and energy sector stakeholders from across the region.
+          </p>
+        </div>
+      </aside>
+
+      <!-- RIGHT: In the News -->
+      <div class="news-side" id="news">
+        <div class="news-header">
+          <div>
+            <p class="kicker">In the News</p>
+            <h2 class="display">The regional pulse on energy and power grids.</h2>
+            <p class="lead-2">A short, curated read of recent developments shaping the Forum agenda &mdash; project milestones, regional initiatives, and the policy and investment signals reshaping power systems across East Asia and the Pacific.</p>
+          </div>
+          <div class="news-meta">
+            <span class="news-meta-label">As of May 2026</span>
+          </div>
+        </div>
+
+        <div class="news-feed mt-32" id="news-feed">
 
       <div class="news-feed-tabs" role="tablist" aria-label="News categories">
         <button class="news-feed-tab is-active" data-cat="regional-integration" type="button">Regional Integration</button>
@@ -292,6 +298,9 @@
         </div>
 
       </div>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
