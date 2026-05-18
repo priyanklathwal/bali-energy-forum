@@ -26,7 +26,8 @@
     </div>
   </div>
   <div class="hero-split-right">
-    <img class="map" src="images/world-dots.svg" alt="Stylized dotted world map highlighting Bali, Indonesia">
+    <img class="hero-photo" src="images/bali-temple.jpg" alt="Pura Ulun Danu Beratan, the iconic lakeside temple in the Bali highlands">
+    <figcaption class="hero-photo-credit">Pura Ulun Danu Beratan &middot; Bali, Indonesia</figcaption>
   </div>
 </section>
 
@@ -61,6 +62,7 @@
     <a href="#why">Why Now</a>
     <a href="#themes">Themes</a>
     <a href="#cop">Communities of Practice</a>
+    <a href="#news">In the News</a>
     <a href="#partners">Partners</a>
   </div>
 </nav>
@@ -93,6 +95,16 @@
       <img src="images/eap-energy-context.png" alt="EAP energy context: rapidly surging electricity demand to 2050, fossil-heavy power system, and energy security concerns across availability of supply, networks, and affordability.">
       <figcaption>Source: Adapted from IEA WEO 2025 (Current Policies Scenario).</figcaption>
     </figure>
+  </div>
+</section>
+
+<!-- ============================================================
+     INTERSTITIAL BANNER PHOTO
+     ============================================================ -->
+<section class="banner-photo" aria-hidden="true">
+  <img src="images/transmission-sunset.jpg" alt="Power transmission lines at sunset">
+  <div class="banner-overlay">
+    <p class="banner-quote">&ldquo;From ambition to delivery &mdash; building the power systems East Asia and the Pacific need for the next decade.&rdquo;</p>
   </div>
 </section>
 
@@ -181,6 +193,69 @@
 </section>
 
 <!-- ============================================================
+     IN THE NEWS — curated EAP energy + AI items
+     ============================================================ -->
+<section id="news" class="story-section">
+  <div class="story-inner">
+    <div class="news-header">
+      <div>
+        <p class="kicker">In the News</p>
+        <h2 class="display">The regional pulse on energy and AI.</h2>
+        <p class="lead-2">A short, curated read of recent developments shaping the agenda &mdash; project milestones, regional initiatives, and the rapidly expanding intersection of AI and power systems across East Asia and the Pacific.</p>
+      </div>
+      <div class="news-meta">
+        <span class="news-meta-label">Hand-picked</span>
+        <span class="news-meta-date">As of May 2026</span>
+      </div>
+    </div>
+
+    <div class="news-grid mt-32">
+      <a class="news-card" href="https://asean.org/adb-and-world-bank-group-launch-the-asean-power-grid-financing-initiative-with-the-asean-secretariat-and-the-asean-centre-for-energy-ace/" target="_blank" rel="noopener">
+        <span class="news-tag">Regional Integration</span>
+        <h3>ADB and World Bank Group launch the ASEAN Power Grid Financing Initiative</h3>
+        <p>A joint financing platform with the ASEAN Secretariat and ACE to accelerate cross-border interconnection.</p>
+        <span class="news-source">ASEAN Secretariat</span>
+      </a>
+
+      <a class="news-card" href="https://www.sarawakenergy.com/media-info/media-releases/2026/energisation-of-sarawak-sabah-interconnection-strengthens-regional-grid-network-2" target="_blank" rel="noopener">
+        <span class="news-tag">Grid Milestone</span>
+        <h3>Sarawak&ndash;Sabah Interconnection energized, strengthening Borneo&rsquo;s regional grid</h3>
+        <p>A new chapter for sub-regional power trade in Malaysia &mdash; an early proof point for the broader APG vision.</p>
+        <span class="news-source">Sarawak Energy &middot; January 2026</span>
+      </a>
+
+      <a class="news-card" href="https://www.pv-magazine.com/2026/05/05/indonesia-tenders-1-2-gw-of-solar/" target="_blank" rel="noopener">
+        <span class="news-tag">Generation</span>
+        <h3>PLN tenders 1.2 GW of utility-scale solar under &ldquo;Mentari Nusantara I&rdquo;</h3>
+        <p>Capacity spread across Java, Kalimantan, Sulawesi, Sumatra, and eastern Indonesia &mdash; targeted for commercial operation by 2029.</p>
+        <span class="news-source">pv magazine &middot; May 2026</span>
+      </a>
+
+      <a class="news-card" href="https://techwireasia.com/2026/02/singtel-sovereign-ai-infrastructure-southeast-asia-johor/" target="_blank" rel="noopener">
+        <span class="news-tag">AI &amp; Power</span>
+        <h3>Singtel builds an &ldquo;AI grid&rdquo; modeled on utility architecture across Johor and Batam</h3>
+        <p>Data centers as generators, fiber and 5G as transmission &mdash; new AI-ready capacity scheduled online in H2 2026.</p>
+        <span class="news-source">TechWire Asia</span>
+      </a>
+
+      <a class="news-card" href="https://www.iea.org/commentaries/driving-global-and-regional-collaboration-to-realise-the-asean-power-grid-vision" target="_blank" rel="noopener">
+        <span class="news-tag">Analysis</span>
+        <h3>IEA: Driving global and regional collaboration on the ASEAN Power Grid</h3>
+        <p>A reference framing for the next phase of multilateral cooperation, ahead of the Forum&rsquo;s session on cross-border interconnection.</p>
+        <span class="news-source">International Energy Agency</span>
+      </a>
+
+      <a class="news-card" href="https://www.greenclimate.fund/project/fp090" target="_blank" rel="noopener">
+        <span class="news-tag">Pacific</span>
+        <h3>Tonga Renewable Energy Project advances under the Pacific Islands Renewable Energy Investment Program</h3>
+        <p>Utility-scale storage for base load and green mini-grids on the outer islands &mdash; one of seven SIDS in the program.</p>
+        <span class="news-source">Green Climate Fund</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
      PARTNERS — logo grid
      ============================================================ -->
 <section id="partners" class="story-section grey">
@@ -238,7 +313,7 @@
     if (el) { e.preventDefault(); el.scrollIntoView({ behavior: 'smooth', block: 'start' }); setActive(id); history.replaceState(null,'', '#'+id); }
   }));
   // Update active tab on scroll
-  const ids = ['overview','why','themes','cop','partners'];
+  const ids = ['overview','why','themes','cop','news','partners'];
   const obs = new IntersectionObserver(entries => {
     entries.forEach(e => { if (e.isIntersecting) setActive(e.target.id); });
   }, { rootMargin: '-30% 0px -65% 0px', threshold: 0 });
