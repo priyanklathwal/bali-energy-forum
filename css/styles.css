@@ -565,7 +565,33 @@ h2.display.light { color: #fff; }
 /* ============================================================
    CLOSING CTA
    ============================================================ */
-.closing-cta { background: var(--ink); color: #fff; text-align: center; }
+.partner-tiers {
+  margin-top: 36px;
+  display: grid;
+  gap: 28px;
+}
+.partner-tier {
+  padding: 24px 0;
+  border-top: 1px solid var(--rule);
+}
+.partner-tier:last-child { border-bottom: 1px solid var(--rule); }
+.partner-tier .tier-label {
+  margin: 0 0 10px;
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+  color: var(--wb-infra);
+}
+.partner-tier .tier-list {
+  margin: 0;
+  font-size: 17px;
+  line-height: 1.55;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.closing-cta { background: var(--wb-corp); color: #fff; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.10); }
 .closing-inner { max-width: 880px; margin: 0 auto; padding: 76px 32px; }
 .closing-cta h2 {
   font-size: 32px;

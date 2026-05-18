@@ -59,7 +59,7 @@
             <li><a href="themes.html">Themes</a></li>
             <li><a href="partners.html">Partners</a></li>
             <li><a href="communities.html">Communities of Practice</a></li>
-            <li><a href="logistics.html">Logistics (participants)</a></li>
+            <li><a href="logistics.html">Logistics</a></li>
           </ul>
         </div>
         <div>
