@@ -25,7 +25,7 @@
       <a class="btn btn-secondary" href="themes.html">Themes</a>
     </div>
   </div>
-  <div class="hero-split-right">
+  <div class="hero-split-right" id="hero-rotator">
     <img class="hero-photo" src="images/sidrap-wind-farm.jpg" alt="Wind turbines at the Sidrap Wind Farm in South Sulawesi, Indonesia's first utility-scale wind power installation">
     <figcaption class="hero-photo-credit">Sidrap Wind Farm &middot; South Sulawesi, Indonesia</figcaption>
   </div>
@@ -218,7 +218,7 @@
       </a>
 
       <a class="news-card" href="https://www.sarawakenergy.com/media-info/media-releases/2026/energisation-of-sarawak-sabah-interconnection-strengthens-regional-grid-network-2" target="_blank" rel="noopener">
-        <span class="news-tag">Grid Milestone</span>
+        <span class="news-tag">Milestones</span>
         <h3>Sarawak&ndash;Sabah Interconnection energized, strengthening Borneo&rsquo;s regional grid</h3>
         <p>A new chapter for sub-regional power trade in Malaysia &mdash; an early proof point for the broader APG vision.</p>
         <span class="news-source">Sarawak Energy &middot; January 2026</span>
@@ -232,7 +232,7 @@
       </a>
 
       <a class="news-card" href="https://techwireasia.com/2026/02/singtel-sovereign-ai-infrastructure-southeast-asia-johor/" target="_blank" rel="noopener">
-        <span class="news-tag">AI and Power</span>
+        <span class="news-tag">Artificial Intelligence and Power</span>
         <h3>Singtel builds an &ldquo;AI grid&rdquo; modeled on utility architecture across Johor and Batam</h3>
         <p>Data centers as generators, fiber and 5G as transmission &mdash; new AI-ready capacity scheduled online in H2 2026.</p>
         <span class="news-source">TechWire Asia</span>
@@ -318,6 +318,40 @@
     entries.forEach(e => { if (e.isIntersecting) setActive(e.target.id); });
   }, { rootMargin: '-30% 0px -65% 0px', threshold: 0 });
   ids.forEach(id => { const el = document.getElementById(id); if (el) obs.observe(el); });
+
+  // Hero photo rotator — 5 curated images, ~5s per slide, pause on hover, respects reduced motion.
+  (function () {
+    const wrap = document.getElementById('hero-rotator');
+    if (!wrap) return;
+    const img = wrap.querySelector('.hero-photo');
+    const cap = wrap.querySelector('.hero-photo-credit');
+    const slides = [
+      { src: 'images/sidrap-wind-farm.jpg',    alt: "Wind turbines at the Sidrap Wind Farm in South Sulawesi, Indonesia's first utility-scale wind power installation", caption: 'Sidrap Wind Farm · South Sulawesi, Indonesia' },
+      { src: 'images/bali-rice-terraces.jpg',  alt: 'Terraced rice paddies in the Bali highlands',                                                                          caption: 'Rice terraces · Bali, Indonesia' },
+      { src: 'images/transmission-sunset.jpg', alt: 'High-voltage transmission lines silhouetted against a sunset sky',                                                      caption: 'Grid infrastructure · East Asia and the Pacific' },
+      { src: 'images/world-dots.svg',          alt: 'Dotted world map highlighting Bali, Indonesia',                                                                         caption: 'Bali · Host city, East Asia and Pacific' },
+      { src: 'images/bali-temple.jpg',         alt: 'Pura Ulun Danu Beratan, the iconic lakeside temple in the Bali highlands',                                              caption: 'Pura Ulun Danu Beratan · Bali, Indonesia' },
+    ];
+    slides.forEach(s => { const pre = new Image(); pre.src = s.src; });
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    let i = 0;
+    let paused = false;
+    wrap.addEventListener('mouseenter', () => { paused = true; });
+    wrap.addEventListener('mouseleave', () => { paused = false; });
+    document.addEventListener('visibilitychange', () => { paused = document.hidden; });
+    setInterval(() => {
+      if (paused) return;
+      i = (i + 1) % slides.length;
+      const s = slides[i];
+      wrap.classList.add('is-fading');
+      setTimeout(() => {
+        img.src = s.src;
+        img.alt = s.alt;
+        cap.textContent = s.caption;
+        wrap.classList.remove('is-fading');
+      }, 600);
+    }, 5000);
+  })();
 </script>
 </body>
 </html>
