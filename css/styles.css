@@ -947,7 +947,7 @@ h2.display.light { color: #fff; }
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-  transition: opacity 500ms ease, visibility 500ms;
+  transition: opacity 350ms ease, visibility 350ms;
 }
 .news-feed-panel.is-active {
   opacity: 1;
