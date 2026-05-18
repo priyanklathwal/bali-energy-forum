@@ -347,13 +347,17 @@ h2.display.light { color: #fff; }
 }
 .context-figure {
   margin: 0;
+  padding: 28px 28px 18px;
+  background: var(--paper);
+  border: 1px solid var(--rule);
+  border-radius: 6px;
 }
 .context-figure img {
   display: block;
   width: 100%;
   height: auto;
-  border: 1px solid var(--rule);
-  border-radius: 6px;
+  border: none;
+  border-radius: 0;
 }
 .context-figure figcaption {
   font-size: 13px;
