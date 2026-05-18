@@ -11,14 +11,14 @@
 // For sensitive content, put the site behind Cloudflare Access or similar.
 
 const CODE_HASHES = [
-  { hash: "5f4b02e7b30ba3c31bb31b11133fa2cb87bf7caeb6e5f4270ea3caff15dbd31f", note: "Priyank Lathwal" },
-  { hash: "fc9cfece0198cb65dadf0d2954d74b3accb38f8aa348f07fa548298bc63344eb", note: "Yussuf Uwamahoro" },
-  { hash: "fc11b91ae9b2a32bc50e1906960d0cd5f0b7c94f0e817eb91a4da41af1ca857f", note: "Ashu Apuruv Agarwal" },
-  { hash: "3dc82413ab96cee908e6c767fe023988ac4a7509e235222e1c5c103fd83dc11b", note: "Byambasuren Chuluunbat" },
-  { hash: "28beadcc151df42ba0c1a681245b94431ebf8c98235cc65c81b1a3a1a8e89a79", note: "Yuge Ma" },
-  { hash: "daa518d964f523bf29c4cdc6bdaaaf75c7c55d5bd2bc5f66ac2d24f34d8f682a", note: "Julian Jose Palma Diaz" },
-  { hash: "748abef9babcbff2ef75e740df6897e941f99ea601ac60a13d84a3da4e485487", note: "Yasminnuha Jauharini" },
-  { hash: "2cb7b1150ac733f208f89878bf2ac582a0ddd09b64b328197e1f0d55b71a2d63", note: "Claudia Vasquez" },
+  { hash: "75a6e1074246e2a4aa70da5c20b6390ad47d28afb92bceb419727ef3ad5e9958", note: "Priyank Lathwal" },
+  { hash: "f75daa2e432a06b69658cad0c74cc20c47ddbbb153e42a734e8129bd7e59ee01", note: "Yussuf Uwamahoro" },
+  { hash: "8e673517a5c527f47411c1de77f5d130b67a6e7a599acfc1869b49f8b03094f1", note: "Ashu Apuruv Agarwal" },
+  { hash: "5d91a2fe9f29e933933cf776daf1738be269ae2f29a10e4bc92ebb031f1cca1b", note: "Byambasuren Chuluunbat" },
+  { hash: "54fd95ec64b6e2037e2be3219c9bbe22be3b6b4070ff91970114199fda3932e8", note: "Yuge Ma" },
+  { hash: "d54d8d724f954ce3cb57063c8bf46cde85c7bece94ada778647fc69146414a42", note: "Julian Jose Palma Diaz" },
+  { hash: "9593bc074c0439cea4774ba983d354ab068780f7c8c5e8c8b8b6c83de5d30f48", note: "Yasminnuha Jauharini" },
+  { hash: "c5f47288e780377476c8eab568b4817ce74ca5d71c6347017e6944ecb281b211", note: "Claudia Vasquez" },
 ];
 
 const STORAGE_KEY = "eapForumGateUnlocked";

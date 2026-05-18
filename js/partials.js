@@ -48,7 +48,7 @@
       <div class="wb-footer-inner">
         <div>
           <h4>About the Forum</h4>
-          <p>The East Asia and Pacific Energy Knowledge and Learning Forum is convened by the World Bank Group with support from ESMAP and partners including the IEA, IRENA, and Lawrence Berkeley National Laboratory.</p>
+          <p>The East Asia and Pacific Energy Knowledge and Learning Forum is convened by the World Bank Group with support from the Energy Sector Management Assistance Program and partners including the International Energy Agency, the International Renewable Energy Agency, and Lawrence Berkeley National Laboratory.</p>
           <p>Bali, Indonesia &middot; June 3 to 5, 2026.</p>
         </div>
         <div>
