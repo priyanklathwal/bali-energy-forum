@@ -203,82 +203,95 @@
         <h2 class="display">The regional pulse on energy and power grids.</h2>
         <p class="lead-2">A short, curated read of recent developments shaping the Forum agenda &mdash; project milestones, regional initiatives, and the policy and investment signals reshaping power systems across East Asia and the Pacific.</p>
       </div>
+      <div class="news-meta">
+        <span class="news-meta-label">As of May 2026</span>
+      </div>
     </div>
 
     <div class="news-feed mt-32" id="news-feed">
 
-      <aside class="news-feed-meta">
-        <span class="news-feed-tag">As of May 2026</span>
-        <div class="news-feed-count">
-          <span class="news-feed-count-num">6</span>
-          <span class="news-feed-count-label">stories tracked<br>across the region</span>
-        </div>
-        <ul class="news-feed-legend">
-          <li data-cat="regional-integration"><span class="dot"></span>Regional Integration</li>
-          <li data-cat="transmission"><span class="dot"></span>Transmission</li>
-          <li data-cat="generation"><span class="dot"></span>Generation</li>
-          <li data-cat="ai-power"><span class="dot"></span>Artificial Intelligence and Power</li>
-          <li data-cat="analysis"><span class="dot"></span>Analysis</li>
-          <li data-cat="distribution"><span class="dot"></span>Distribution</li>
-        </ul>
-      </aside>
+      <div class="news-feed-tabs" role="tablist" aria-label="News categories">
+        <button class="news-feed-tab is-active" data-cat="regional-integration" type="button">Regional Integration</button>
+        <button class="news-feed-tab" data-cat="grid" type="button">Grid</button>
+        <button class="news-feed-tab" data-cat="ai-power" type="button">Artificial Intelligence and Power</button>
+        <button class="news-feed-tab" data-cat="analysis" type="button">Analysis</button>
+      </div>
 
-      <div class="news-feed-stage">
-        <div class="news-feed-slides">
+      <div class="news-feed-panels">
 
-          <a class="news-feed-slide is-active" data-cat="regional-integration" href="https://asean.org/adb-and-world-bank-group-launch-the-asean-power-grid-financing-initiative-with-the-asean-secretariat-and-the-asean-centre-for-energy-ace/" target="_blank" rel="noopener">
-            <span class="news-tag">Regional Integration</span>
+        <div class="news-feed-panel is-active" data-cat="regional-integration">
+          <a class="news-card" href="https://asean.org/adb-and-world-bank-group-launch-the-asean-power-grid-financing-initiative-with-the-asean-secretariat-and-the-asean-centre-for-energy-ace/" target="_blank" rel="noopener">
             <h3>ADB and World Bank Group launch the ASEAN Power Grid Financing Initiative</h3>
             <p>A joint financing platform with the ASEAN Secretariat and ACE to accelerate cross-border interconnection.</p>
             <span class="news-source">ASEAN Secretariat</span>
           </a>
+          <a class="news-card" href="#" target="_blank" rel="noopener">
+            <h3>Lao PDR&ndash;Singapore Power Integration Project crosses 100 GWh imported via Thailand and Malaysia</h3>
+            <p>A proof point that multilateral power trade is moving from MoU to megawatt-hours &mdash; ahead of the APG Financing Initiative ramp.</p>
+            <span class="news-source">Energy Market Authority Singapore &middot; April 2026</span>
+          </a>
+          <a class="news-card" href="#" target="_blank" rel="noopener">
+            <h3>ASEAN Centre for Energy publishes draft cross-border tariff and settlement framework</h3>
+            <p>Consultation draft sets common settlement rules for multilateral trades, building on the Enhanced APG MoU.</p>
+            <span class="news-source">ASEAN Centre for Energy &middot; March 2026</span>
+          </a>
+        </div>
 
-          <a class="news-feed-slide" data-cat="transmission" href="https://www.sarawakenergy.com/media-info/media-releases/2026/energisation-of-sarawak-sabah-interconnection-strengthens-regional-grid-network-2" target="_blank" rel="noopener">
-            <span class="news-tag">Transmission</span>
+        <div class="news-feed-panel" data-cat="grid">
+          <a class="news-card" href="https://www.sarawakenergy.com/media-info/media-releases/2026/energisation-of-sarawak-sabah-interconnection-strengthens-regional-grid-network-2" target="_blank" rel="noopener">
             <h3>Sarawak&ndash;Sabah Interconnection energized, strengthening Borneo&rsquo;s regional grid</h3>
             <p>A new chapter for sub-regional power trade in Malaysia &mdash; an early proof point for the broader APG vision.</p>
-            <span class="news-source">Sarawak Energy &middot; January 2026</span>
+            <span class="news-source">Sarawak Energy &middot; January 2026 &middot; Transmission</span>
           </a>
-
-          <a class="news-feed-slide" data-cat="generation" href="https://www.pv-magazine.com/2026/05/05/indonesia-tenders-1-2-gw-of-solar/" target="_blank" rel="noopener">
-            <span class="news-tag">Generation</span>
+          <a class="news-card" href="https://www.pv-magazine.com/2026/05/05/indonesia-tenders-1-2-gw-of-solar/" target="_blank" rel="noopener">
             <h3>PLN tenders 1.2 GW of utility-scale solar under &ldquo;Mentari Nusantara I&rdquo;</h3>
             <p>Capacity spread across Java, Kalimantan, Sulawesi, Sumatra, and eastern Indonesia &mdash; targeted for commercial operation by 2029.</p>
-            <span class="news-source">pv magazine &middot; May 2026</span>
+            <span class="news-source">pv magazine &middot; May 2026 &middot; Generation</span>
           </a>
+          <a class="news-card" href="https://www.greenclimate.fund/project/fp090" target="_blank" rel="noopener">
+            <h3>Tonga Renewable Energy Project advances under the Pacific Islands Renewable Energy Investment Program</h3>
+            <p>Utility-scale storage and green mini-grids on the outer islands &mdash; one of seven SIDS in the program.</p>
+            <span class="news-source">Green Climate Fund &middot; Distribution</span>
+          </a>
+        </div>
 
-          <a class="news-feed-slide" data-cat="ai-power" href="https://techwireasia.com/2026/02/singtel-sovereign-ai-infrastructure-southeast-asia-johor/" target="_blank" rel="noopener">
-            <span class="news-tag">Artificial Intelligence and Power</span>
+        <div class="news-feed-panel" data-cat="ai-power">
+          <a class="news-card" href="https://techwireasia.com/2026/02/singtel-sovereign-ai-infrastructure-southeast-asia-johor/" target="_blank" rel="noopener">
             <h3>Singtel builds an &ldquo;AI grid&rdquo; modeled on utility architecture across Johor and Batam</h3>
             <p>Data centers as generators, fiber and 5G as transmission &mdash; new AI-ready capacity scheduled online in H2 2026.</p>
             <span class="news-source">TechWire Asia</span>
           </a>
+          <a class="news-card" href="#" target="_blank" rel="noopener">
+            <h3>Microsoft commits $1.7 billion for renewable-powered AI data centres in Indonesia</h3>
+            <p>One of the largest single-country cloud and AI infrastructure commitments in EAP &mdash; with explicit 24/7 carbon-free energy targets.</p>
+            <span class="news-source">Microsoft News &middot; April 2026</span>
+          </a>
+          <a class="news-card" href="#" target="_blank" rel="noopener">
+            <h3>IEA publishes its first AI-Power Sector Outlook to 2030</h3>
+            <p>Data centre electricity demand could double by 2030, with Asia accounting for nearly half of new load &mdash; reshaping system-planning assumptions.</p>
+            <span class="news-source">International Energy Agency &middot; February 2026</span>
+          </a>
+        </div>
 
-          <a class="news-feed-slide" data-cat="analysis" href="https://www.iea.org/commentaries/driving-global-and-regional-collaboration-to-realise-the-asean-power-grid-vision" target="_blank" rel="noopener">
-            <span class="news-tag">Analysis</span>
+        <div class="news-feed-panel" data-cat="analysis">
+          <a class="news-card" href="https://www.iea.org/commentaries/driving-global-and-regional-collaboration-to-realise-the-asean-power-grid-vision" target="_blank" rel="noopener">
             <h3>IEA: Driving global and regional collaboration on the ASEAN Power Grid</h3>
             <p>A reference framing for the next phase of multilateral cooperation, ahead of the Forum&rsquo;s session on cross-border interconnection.</p>
             <span class="news-source">International Energy Agency</span>
           </a>
-
-          <a class="news-feed-slide" data-cat="distribution" href="https://www.greenclimate.fund/project/fp090" target="_blank" rel="noopener">
-            <span class="news-tag">Distribution</span>
-            <h3>Tonga Renewable Energy Project advances under the Pacific Islands Renewable Energy Investment Program</h3>
-            <p>Utility-scale storage for base load and green mini-grids on the outer islands &mdash; one of seven SIDS in the program.</p>
-            <span class="news-source">Green Climate Fund</span>
+          <a class="news-card" href="#" target="_blank" rel="noopener">
+            <h3>ESMAP: Universal electricity access in Pacific SIDS by 2030 needs roughly $5 billion</h3>
+            <p>A new EAP financing gap analysis covering Fiji, Kiribati, RMI, FSM, Tonga, Tuvalu, and Vanuatu &mdash; with mini-grid pathways front and centre.</p>
+            <span class="news-source">ESMAP / World Bank &middot; March 2026</span>
           </a>
+          <a class="news-card" href="#" target="_blank" rel="noopener">
+            <h3>ADB Asia-Pacific Energy Outlook: power demand to grow 60% by 2040, led by AI and electrification</h3>
+            <p>The flagship outlook flags grid investment, regional power trade, and storage as the binding constraints for the next decade.</p>
+            <span class="news-source">Asian Development Bank &middot; April 2026</span>
+          </a>
+        </div>
 
-        </div>
-        <div class="news-feed-dots" role="tablist" aria-label="News stories">
-          <button class="news-feed-dot is-active" data-idx="0" type="button" aria-label="Story 1"></button>
-          <button class="news-feed-dot" data-idx="1" type="button" aria-label="Story 2"></button>
-          <button class="news-feed-dot" data-idx="2" type="button" aria-label="Story 3"></button>
-          <button class="news-feed-dot" data-idx="3" type="button" aria-label="Story 4"></button>
-          <button class="news-feed-dot" data-idx="4" type="button" aria-label="Story 5"></button>
-          <button class="news-feed-dot" data-idx="5" type="button" aria-label="Story 6"></button>
-        </div>
       </div>
-
     </div>
   </div>
 </section>
@@ -347,31 +360,24 @@
   }, { rootMargin: '-30% 0px -65% 0px', threshold: 0 });
   ids.forEach(id => { const el = document.getElementById(id); if (el) obs.observe(el); });
 
-  // News feed — dissolving crossfade carousel. Each story shows for ~6s,
-  // legend dot pulses for the active category, progress bar tracks position.
+  // News feed — category tabs, auto-rotate every 10s, click to switch.
   (function () {
     const feed = document.getElementById('news-feed');
     if (!feed) return;
-    const slides = Array.from(feed.querySelectorAll('.news-feed-slide'));
-    const dots   = Array.from(feed.querySelectorAll('.news-feed-dot'));
-    const legend = Array.from(feed.querySelectorAll('.news-feed-legend li'));
-    if (slides.length === 0) return;
+    const tabs   = Array.from(feed.querySelectorAll('.news-feed-tab'));
+    const panels = Array.from(feed.querySelectorAll('.news-feed-panel'));
+    if (tabs.length === 0 || panels.length === 0) return;
 
     let i = 0;
     let paused = false;
     let timer = null;
-    const INTERVAL = 6000;
+    const INTERVAL = 10000;
 
     function show(idx) {
-      i = ((idx % slides.length) + slides.length) % slides.length;
-      slides.forEach((s, j) => s.classList.toggle('is-active', j === i));
-      dots.forEach((d, j) => d.classList.toggle('is-active', j === i));
-      const cat = slides[i].getAttribute('data-cat');
-      legend.forEach(l => {
-        const match = l.getAttribute('data-cat') === cat;
-        l.classList.toggle('is-active', match);
-        l.classList.toggle('is-dim', !match);
-      });
+      i = ((idx % tabs.length) + tabs.length) % tabs.length;
+      const cat = tabs[i].getAttribute('data-cat');
+      tabs.forEach(t => t.classList.toggle('is-active', t.getAttribute('data-cat') === cat));
+      panels.forEach(p => p.classList.toggle('is-active', p.getAttribute('data-cat') === cat));
     }
 
     function tick() { if (!paused) show(i + 1); }
@@ -381,8 +387,8 @@
       timer = setInterval(tick, INTERVAL);
     }
 
-    dots.forEach((d, j) => {
-      d.addEventListener('click', () => { show(j); restart(); });
+    tabs.forEach((t, j) => {
+      t.addEventListener('click', () => { show(j); restart(); });
     });
 
     feed.addEventListener('mouseenter', () => { paused = true; });
