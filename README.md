@@ -37,9 +37,10 @@ Then visit <http://localhost:8000>.
 
 ## Shared password for the logistics page
 
-All participants use one shared password to unlock `logistics.html`. The current
-password is stored as a SHA-256 hash in [js/gate.js](js/gate.js); the plaintext
-is included as an inline comment for the maintainer's reference.
+All participants use one shared password to unlock `logistics.html`. Only the
+SHA-256 hash lives in [js/gate.js](js/gate.js); the plaintext is **not** stored
+in this repo. Keep it in your password manager and share with participants via
+email.
 
 ### To rotate the password
 
@@ -49,8 +50,8 @@ is included as an inline comment for the maintainer's reference.
    ```bash
    printf '%s' 'new-password-here' | shasum -a 256
    ```
-3. Replace `PASSWORD_HASH` in [js/gate.js](js/gate.js) with the new hash and
-   update the trailing comment with the new plaintext.
+3. Replace `PASSWORD_HASH` in [js/gate.js](js/gate.js) with the new hash. Do
+   not commit the plaintext to the repo — store it in your password manager.
 4. Commit and push — GitHub Pages will redeploy automatically.
 5. Email the new password to participants.
 

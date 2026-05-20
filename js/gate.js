@@ -5,7 +5,9 @@
 // views source can see the hash and brute-force a short password. Appropriate
 // for non-confidential logistics only.
 
-const PASSWORD_HASH = "54b134339a41eec6b7ac8d6f2a8c6d55aa67b97893c896b9daa0bf153b8f9f8e"; // bali2026
+// Plaintext password is kept out of the repo. Store it in your password manager
+// and share with participants via email. To rotate, see README.md.
+const PASSWORD_HASH = "54b134339a41eec6b7ac8d6f2a8c6d55aa67b97893c896b9daa0bf153b8f9f8e";
 
 const STORAGE_KEY = "eapForumGateUnlocked";
 const SESSION_HOURS = 12;
