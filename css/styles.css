@@ -199,6 +199,12 @@ img { max-width: 100%; height: auto; display: block; }
   display: block;
   transition: opacity 600ms ease;
 }
+.hero-split-right.is-map .hero-photo {
+  object-fit: contain;
+  object-position: center;
+  background: var(--paper-2, #f6f7f9);
+  padding: 16px;
+}
 .hero-split-right .hero-photo-credit {
   flex: 0 0 auto;
   background: var(--paper-2);
